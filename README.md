@@ -1,6 +1,6 @@
 # template-slides
 
-Este repositório contém um modelo de apresentação slides utilizando LaTeX do Centro de Uducação do Planalto Norte (CEPLAN). O modelo foi derivado do modelo Execushares de Kenton Hamaluik:
+Este repositório contém um modelo de apresentação slides utilizando LaTeX do Centro de Educação do Planalto Norte (CEPLAN). O template foi derivado do modelo Execushares de Kenton Hamaluik:
 
 https://github.com/FuzzyWuzzie/Beamer-Theme-Execushares
 
