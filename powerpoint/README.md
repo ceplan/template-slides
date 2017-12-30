@@ -11,7 +11,7 @@ Este modelo (template) de apresentação de slides foi desenvolvido para o Centr
 - O arquivo *sample.pptm* contém um exemplo do uso do template utilizando macros.
 - Para criar uma nova apresentação utilize o arquivo *template.potm*.
 - Utilize as opções de layout dos slides disponíveis no template.
-- Para adicionar ou remover a barra de progresso nos slides habilite macros (veja como fazer [aqui](https://support.office.com/pt-br/article/Habilitar-ou-desabilitar-macros-em-arquivos-do-Office-12b036fd-d140-4e74-b45e-16fed1a7e5c6) e a aba do modo desenvolvedor.
+- Para adicionar ou remover a barra de progresso nos slides habilite macros (veja como fazer [aqui](https://support.office.com/pt-br/article/Habilitar-ou-desabilitar-macros-em-arquivos-do-Office-12b036fd-d140-4e74-b45e-16fed1a7e5c6)) e a aba do modo desenvolvedor.
 
 ### Como habilitar o modo desenvolvedor e adicionar a barra de progresso:
 - Vá em *Arquivo* > *Opções* > *Personalizar Faixa de Opções*.
