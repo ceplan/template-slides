@@ -1,6 +1,6 @@
 # template-slides
 
-Este repositório contém modelos de apresentação de slides para o Centro de Educação do Planalto Norte (CEPLAN). Os modelos foram obtidos adaptados de modelos on-line.
+Este repositório contém modelos de apresentaçes de slides para o Centro de Educação do Planalto Norte (CEPLAN). Os modelos foram obtidos e adaptados de modelos on-line.
 
 ## Modelos:
 
