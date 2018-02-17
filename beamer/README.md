@@ -19,35 +19,35 @@ $ git clone https://github.com/ceplan/template-slides.git
 
 ## Gerando a apresentação:
 
-> The example below is based on execushares template located in templates/execushares/
+> O exemplo abaixo é baseado no template execushares disponível em templates/execushares/
 
-Customize template-slides/templates/execushares/sample.tex to your liking:
+Personalize o arquivo template-slides/templates/execushares/sample.tex como preferir:
 
 ```shell
 $ vim $HOME/template-slides/templates/execushares/slides.tex
 ```
 
-Then change to the template-slides directory and run make to generate a presentation PDF:
+Acesse o diretório `template-slides` e execute o comando `make` para gerar um PDF da apresentação:
 
 ```shell
 $ cd $HOME/template-slides/templates/execushares/
 $ make
 ```
 
-If the folder already contains the pdf file, you can force make:
+Se a pasta já contém um arquivo PDF, o comando `make` pode ser refeito usando `--always-make`:
 
 ```shell
 $ cd $HOME/template-slides/templates/execushares/
 $ make --always-make
 ```
 
-You can then view the resulting pdf, named sample.pdf, in the 'template-slides/templates/execushares/' directory:
+O PDF resultante da compilação, nomeado `sample.pdf`, está presente no diretório 'template-slides/templates/execushares/'. Desse modo, pode ser visualizado através de um leitor de PDF:
 
 ```shell
 $ xpdf $HOME/template-slides/templates/execushares/sample.pdf
 ```
 
-You can also use make to do this automatically with either xpdf, okular, acroread, or evince:
+Você também pode fazer isto de forma automática com o `xpdf`, `okular`, `acroread` ou `evince`:
 
 ```shell
 $ make view-xpdf
@@ -56,47 +56,46 @@ $ make view-acroread
 $ make view-evince
 ```
 
-The above "make view-\*" commands will automatically build $HOME/template-slides/templates/execushares/sample.pdf if necessary
+Os comandos citados acima automaticamente geram o PDF, se necessário, no diretório `$HOME/template-slides/templates/execushares/sample.pdf`.
 
-You can clean the directory runnig:
+Você pode limpar o diretório do projeto usando:
 
 ```shell
 $ make clean
 ```
 
-### Beamer Templates 
+### Templates do Beamer
+- Acesse [https://www.hartwork.org/beamer-theme-matrix/]
 
-- See [https://www.hartwork.org/beamer-theme-matrix/] 
+> Você não sabe o que é o LaTeX? Acesse [aqui](http://latex-community.org/) e [aqui](http://www.latex-project.org/)
 
-> Do you not know what is LaTeX? Access [here](http://latex-community.org/) and [here](http://www.latex-project.org/)
+# Dicas
 
-# Tips
+Algumas dicas de como inserir alguns elementos na sua apresentação.
 
-Here's how to insert some elements in your presentation.
-
-### How to insert multiple columns
+### Inserindo múltiplas colunas
 ```tex
 \begin{frame}
 		\frametitle{Multiple Columns}
-		
+
 		\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 			\column{.45\textwidth} % Left column and width
 			\textbf{Heading}
-			
+
 			\begin{enumerate}
 				\item Statement
 				\item Explanation
 				\item Example
 			\end{enumerate}
-			
+
 			\column{.5\textwidth} % Right column and width
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-			
+
 		\end{columns}
 	\end{frame}
 ```
 
-### How to insert a table
+### Inserindo uma tabela
 ```tex
 \begin{frame}
 	\frametitle{Table}
@@ -115,7 +114,7 @@ Here's how to insert some elements in your presentation.
 	\end{frame}
 ```
 
-### How to insert a code
+### Inserindo um código
 ```tex
 \begin{frame}[fragile]{Java}
 	\begin{lstlisting}[language=java]
@@ -131,7 +130,7 @@ Here's how to insert some elements in your presentation.
 \end{frame}
 ```
 
-### How to insert a code with destac
+### Inserindo um código com destac
 ```tex
 \begin{frame}[fragile]{Destac}
 	\begin{lstlisting}
@@ -146,8 +145,8 @@ Here's how to insert some elements in your presentation.
 \end{frame}
 ```
 
-### How to use Verbatim 
-- For to use the verbatim in the Beamer is necessary to use the option \verb|fragile|.
+### Usando o ambiente `verbatim`
+- Para isto é necessário adicionar a opção `\verb|fragile|`.
 ```tex
 \begin{frame}[fragile]\frametitle{Verbatim}
 	\begin{verbatim}
@@ -155,11 +154,11 @@ Here's how to insert some elements in your presentation.
 	% any code LaTeX or others
 	\end{frame}
 	\end{verbatim}
-	
+
 \end{frame}
 ```
 
-### How to insert a pseudocode
+### Inserindo um pseudocódigo
 ```tex
 \begin{frame}
 	\frametitle{NSGA-II}
@@ -176,27 +175,27 @@ Here's how to insert some elements in your presentation.
 						Selection/Crossover/Mutation\;
 						$Q \leftarrow $ children\;
 						$t = t + 2$\;
-					}	
+					}
 				}
 				$R \leftarrow P \cup Q$\;
 				Apply \textit{Fast Non-Dominated Sorting} in $R$ genereting vectors $F_{i}$ of non-dominated solutions\;
 				Calculate the \textit{Crowding Distance Sorting} for each solution in $F_{i}$\;
 				$P \leftarrow F(best)$\;
-			}	
+			}
 			\Retorna{$P$}
-		}	
+		}
 	\end{algorithm}
 }
 \end{frame}
 ```
 
-### How to insert a transiction
+### Inserindo efeitos de transição
 ```tex
 \begin{frame}\frametitle{Transiction}
 	A little example of transiction
-	
+
 	\pause
-	
+
 	\begin{enumerate}[a)]
 		\item<2-> first;
 		\item<3-> second;
@@ -205,11 +204,11 @@ Here's how to insert some elements in your presentation.
 \end{frame}
 ```
 
-### How to insert a Blocks of Highlighted Text
+### Inserindo blocos de destaque do texto
 ```tex
 \begin{frame}
 		\frametitle{Blocks of Highlighted Text}
-		
+
 		\begin{block}{Block 1}
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
 		\end{block}
@@ -217,14 +216,14 @@ Here's how to insert some elements in your presentation.
 		\begin{block}{Block 2}
 			Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
 		\end{block}
-		
+
 		\begin{block}{Block 3}
 			Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
 		\end{block}
 	\end{frame}
 ```
 
-### How to insert a Theorem
+### Inserindo um teorema
 ```tex
 	\begin{frame}
 		\frametitle{Theorem}
@@ -234,7 +233,7 @@ Here's how to insert some elements in your presentation.
 	\end{frame}
 ```
 
-### How to insert a citation
+### Inserindo citações
 ```tex
 \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
 \frametitle{Citation}
@@ -244,7 +243,7 @@ This statement requires citation \cite{p1}.
 \end{frame}
 ```
 
-### How to insert the references
+### Inserindo arquivo de referências
 ```tex
 \begin{frame}\frametitle{References}
 	% Bibliography style
